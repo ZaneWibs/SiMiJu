@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: simiju-skripsi
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ADMIN_PASSWORD
+        value: stab2025   # ganti password ini di dashboard Render!
+    # Plan gratis: log.db reset saat restart (normal).
+    # Upgrade ke Starter + aktifkan disk + tambah env DATA_DIR=/data untuk log persisten.

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Database log (jangan ikut di Git, dibuat otomatis)
+log.db
+
+# Backup CSV
+*.backup_*.csv
